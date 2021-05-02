@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <title>Sizing Basic</title>
+</head>
+<body>
+    <style>
+        div {
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: brown;
+        }
+        /* pesen dari ukuran diatasnya */
+        .box1{
+            width: 100%;
+
+        }
+        .box2{
+            width: 100vw;
+
+        }
+        .box3{
+            width: 100vh;
+
+        }
+        
+        .box4{
+            width: 100px;
+        }
+        /* minimal memili ukuran */
+        .box5{
+            min-width: 100px;
+            min-height: 100px;
+        }
+        .box6{
+            max-width: 100px;
+            max-height: 100px;
+        }
+        /*ukuranya auto*/
+        .box7{
+            max-width: auto;
+            max-height: auto;
+        
+        }
+
+    </style>
+    Pesen
+    <div class="box1"></div>
+    view width
+    <div class="box2"></div>
+    view height
+    <div class="box3"></div>
+    pixel 
+    <div class="box4"></div>
+    Minimum Width & Height<br>
+    <textarea class="box5"></textarea> <br>
+    maximum width & height <br>
+    <textarea class="box6"></textarea> <br>
+    Normal
+    <textarea class="box7"></textarea>
+</body>
+</html>

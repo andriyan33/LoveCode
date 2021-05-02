@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOPING</title>
+</head>
+
+<body>
+    <h1>FOR</h1>
+    <p id="number"></p>
+    <h1>FOR ARRAY</h1>
+    <p id="array"></p>
+    <h1>WHILE</h1>
+    <p id="while"></p>
+    <h1>DO WHILE</h1>
+    <p id="dowhile"></p>
+
+    <script>
+        // for
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            text += "Nomor " + i + "<br>";
+        }
+        document.getElementById("number").innerHTML = text;
+
+        // for array
+        var cars = ["BNW", "Toyota", "Avanza"];
+        var text = "List Mobil Impian : <br> ";
+        for (var x of cars) {
+            text += x + "<br>";
+        }
+        document.getElementById("array").innerHTML = text;
+
+        // while 
+        var text = ""
+        var i = 0;
+        while (i < 10) {
+            text += "Nomor " + i + "<br>";
+            i++;
+
+        }
+        document.getElementById("while").innerHTML = text;
+
+        // do while
+        var text = ""
+        var i = 0;
+        do {
+            text += "Nomor " + i + "<br>";
+            i++;
+        }
+        while (i < 10);
+        document.getElementById("dowhile").innerHTML = text;
+    </script>
+</body>
+</html>

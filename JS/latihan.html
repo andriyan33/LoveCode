@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kalkulator</title>
+</head>
+
+<body>
+    <style>
+        button {
+            border-color: blue;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+            color: blue;
+            background: powderblue;
+
+        }
+
+        input {
+            border-color: blue;
+            width: 150px;
+            height: 30px;
+            color: black;
+            background: white;
+        }
+    </style>
+    <table>
+        <tr>
+            <th colspan="4">
+                <input id = "hasil" type="text" placeholder="Hasil">
+                
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2"><button style="color: red;" onclick="clear_semua()">HAPUS</button></td>
+            <td><button style="color: green;">*</button></td>
+            <td><button style="color: green;">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="angka('7')">7</button></td>
+            <td><button onclick="angka('8')">8</button></td>
+            <td><button onclick="angka('9')">9</button></td>
+            <td><button style="color: green;" onclick="operator('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="angka('4')">4</button></td>
+            <td><button onclick="angka('5')">5</button></td>
+            <td><button onclick="angka('6')">6</button></td>
+            <td><button style="color: green;" onclick="operator('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="angka('1')">1</button></td>
+            <td><button onclick="angka('2')">2</button></td>
+            <td><button onclick="angka('3')">3</button></td>
+            <td><button style="color: green;" onclick="total()">=</button></td>
+        </tr>
+
+    </table>
+    <script>
+        var hasil = "";
+        var input1 = "";
+        var input2 = "";
+        var aksi = "";
+
+        function angka(num) {
+            input2 = input2 + num;
+            document.getElementById("hasil").setAttribute("value", input2);
+        }
+        function clear_semua(){
+            hasil=input1=input2=aksi="";
+            value="";
+            document.getElementById("hasil").setAttribute("value", "")
+        }
+        function operator(In){
+            aksi = In;
+            input1 = input2;
+            value = "";
+            input2= "";
+            document.getElementById("hasil").setAttribute("value", "")
+        }
+        function total(){
+            switch(aksi){
+                case "+":
+                hasil=parseInt(input1)+parseInt(input2);
+                document.getElementById("hasil").setAttribute("value", parseInt(hasil))
+                break;
+                case "-":
+                hasil=parseInt(input1)-parseInt(input2);
+                document.getElementById("hasil").setAttribute("value", parseInt(hasil))
+                break;
+                case "*":
+                hasil=parseInt(input1)*parseInt(input2);
+                document.getElementById("hasil").setAttribute("value", parseInt(hasil))
+                break;
+                case "/":
+                hasil=parseInt(input1)/parseInt(input2);
+                document.getElementById("hasil").setAttribute("value", parseInt(hasil))
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
